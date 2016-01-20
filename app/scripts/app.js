@@ -16,6 +16,8 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     //controller: 'MainCtrl'
   });
 
+  $urlRouterProvider.otherwise('/');
+
 });
 
 // angular.module('app').controller('mainCtrl',
