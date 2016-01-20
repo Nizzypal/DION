@@ -1,4 +1,6 @@
+//server
 var express = require ('express');
+
 //libarary
 var stylus = require('stylus');
 var logger = require('morgan');
@@ -7,38 +9,43 @@ var mongoose = require('mongoose');
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
+//Variables
 var app = express();
-
+var path = require('path');
 
 //For stylus
-function compile(str, path){
-	return stylus(str).set('filename', path);
-};
+// function compile(str, path){
+// 	return stylus(str).set('filename', path);
+// };
 
-app.set('views', __dirname + '/server/views');
-app.set('view engine', 'jade');
-app.use(logger('dev'));
+//app.set('views', __dirname + '/app/views');
+//app.set('view engine', 'jade');
+//app.use(logger('dev'));
+
+//Routes
+app.use(express.static(__dirname + '/'));
+app.use(express.static('./app'));
+app.use('/', express.static(path.join(__dirname, 'bower_components')));
+// app.get('/partials/:partialPath', function(req, res){
+// 	res.render('partials/' + req.params.partialPath);
+// });
 
 app.use(bodyParser.json());
-app.use(bodyParser.raw());
-app.use(bodyParser.text());
+//app.use(bodyParser.raw());
+//app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended: false}));
  
 
 //middlware
-app.use(stylus.middleware(
-	{
-		src: __dirname + '/public',
-		compile: compile
-	}
-));
+// app.use(stylus.middleware(
+// 	{
+// 		src: __dirname + '/public',
+// 		compile: compile
+// 	}
+// ));
 
 
-//Routes
-app.use(express.static(__dirname + '/public'));
-app.get('/partials/:partialPath', function(req, res){
-	res.render('partials/' + req.params.partialPath);
-});
+
 
 if (env === 'development'){
 	mongoose.connect('mongodb://localhost/DION');
@@ -70,11 +77,11 @@ Message.findOne().exec(function(err, messageDoc){
 });
 
 
-app.get('*', function (req, res) {
-	res.render('index', {
-		mongoMessage: mongoMessage
-	});
-});
+// app.get('*', function (req, res) {
+// 	res.render('index', {
+// 		mongoMessage: mongoMessage
+// 	});
+// });
 
 //var port = 3030;
 var port = process.env.PORT || 3030;

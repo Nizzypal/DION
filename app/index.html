@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+    ================================================== -->
+  <meta charset="utf-8">
+  <title>DION Online</title>
+  <meta name="description" content="rent a home">
+  <meta name="keywords" content="rent, condo, house, manila, alabang">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+    ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Stylesheet
+    ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsiveness.css">
+
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+  <link href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="bower_components/OwlCarousel/owl-carousel/owl.theme.css" rel="stylesheet">
+
+  <!-- CUSTOM SCRIPTS/CSS -->
+  <link href="css/custom.css" rel="stylesheet">
+
+
+  <!-- Favicons
+    ================================================== -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+  <link rel="stylesheet" href="bower_components/idangerous-swiper/dist/css/swiper.min.css">
+
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="app">
+  <!-- Preloader
+    ================================================== -->
+  <!--
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+-->
+
+  <!-- Navigation
+    ================================================== -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="main">
+          <img src="img/logo.png" alt="logo">
+        </a>
+        <!-- Your logo here-->
+      </div>
+    </div>
+    <!-- End container -->
+  </nav>
+
+
+
+
+
+
+  <!-- Portfolio Section
+    ================================================== -->
+
+  <div ui-view></div>
+
+  <!--      <div ng-include="'views/main.html'"></div>-->
+
+  <!-- End Portfolio Section -->
+
+
+
+
+
+  <!-- About Section
+    ================================================== -->
+  <section id="socials">
+    <div class="container wow bounceIn" data-wow-delay="0.4s">
+      <p>Get the latest update of our new units</p>
+      <p>>> <span class="follow"> Follow us </span> &lt;&lt;</p>
+      <ol class="social">
+        <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+        </li>
+        <!-- Change # with your facebook link -->
+        <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        </li>
+        <!-- Change # with your twitter link -->
+        <li><a href="#"><i class="fa fa-behance fa-2x"></i></a>
+        </li>
+        <!-- Change # with your behance link -->
+        <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a>
+        </li>
+        <!-- Change # with your dribbble link -->
+        <li><a href="#"><i class="fa fa-flickr fa-2x"></i></a>
+        </li>
+        <!-- Change # with your flickr link -->
+        <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+        </li>
+        <!-- Change # with your googleplus link -->
+        <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+        </li>
+        <!-- Change # with your instagram link -->
+      </ol>
+    </div>
+  </section>
+
+  <div id="footer-nav">
+    <!-- Copyright notice on the bottom -->
+    <span>© 2015 DION Online Reserved</span>
+  </div>
+
+
+  <!-- jQuery / JavaScript plugins
+    ================================================== -->
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <!--<script src="/app/js/jquery.js"></script>-->
+  <script src="/app/js/jquery-ui.js"></script>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+
+  <script src="bower_components/idangerous-swiper/dist/js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <!-- Content Animation -->
+  <script type="text/javascript" src="js/SmoothScroll.js"></script>
+  <!-- Smooth scrolling page-->
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/cbpAnimatedHeader.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
+  <!-- Contact page-->
+  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+  <script type="text/javascript" src="js/contact.js"></script>
+
+  <!-- My Custom Plugin JavaScript -->
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+
+<!-- CUSTOM SCRIPTS/CSS -->
+<!-- Custom functions -->
+<script src="plugins/assets/js/functions.js"></script>
+
+<!-- Picker UI--> 
+<script src="plugins/assets/js/jquery-ui.js"></script>
+<link href="plugins/assets/css/jquery-ui.css" rel="stylesheet">
+
+
+<!-- Easing -->
+<script src="plugins/assets/js/jquery.easing.js"></script>
+
+<!-- Nicescroll  -->  
+<script src="plugins/assets/js/jquery.nicescroll.min.js"></script>
+
+<!-- Custom Select -->
+<script type='text/javascript' src='plugins/assets/js/jquery.customSelect.js'></script> 
+
+
+<!-- CAROUSEL -->
+<!-- <link href="plugins/carousel/carousel.css" rel="stylesheet"> -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<![endif]-->
+
+
+<!-- FONTS -->  
+<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic' rel='stylesheet' type='text/css'> 
+
+<!-- REVOLUTION BANNER CSS SETTINGS -->
+<link href="plugins/revolution/css/fullscreen.css" rel="stylesheet" media="screen">
+<link href="plugins/revolution/css/settings.css" rel="stylesheet" media="screen">
+  
+<!-- This page JS -->
+<script type="text/javascript" src="plugins/assets/js/js-index3.js"></script> 
+
+<!-- jQuery KenBurn Slider  -->
+<script type="text/javascript" src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>  
+
+<!-- CarouFredSel -->
+<script src="plugins/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="plugins/assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="plugins/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="plugins/assets/js/helper-plugins/jquery.transit.min.js"></script>
+<script type="text/javascript" src="plugins/assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+
+  <script src="bower_components/OwlCarousel/owl-carousel/owl.carousel.js"></script>
+
+  <script src="scripts/app.js"></script>
+
+  <!-- CONTROLLERS -->
+  <script type="text/javascript" src="/app/scripts/controller/main.controller.js"></script>    
+  <script type="text/javascript" src="/app/scripts/controller/login.controller.js"></script>    
+  <script type="text/javascript" src="/app/scripts/controller/modalController.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/areaController.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/longTerm.controller.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/shortTerm.controller.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/messageController.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/subscribe.controller.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/viewUnit.controller.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/reqeust-inquiries.controller.js"></script>
+  <script type="text/javascript" src="/app/scripts/controller/inquiry.controller.js"></script>  
+
+  <!-- DIRECTIVES -->
+  <script type="text/javascript" src="/app/scripts/directives/inquiry.directive.js"></script>
+ <script type="text/javascript" src="/app/scripts/directives/navbar.directive.js"></script>
+   <script type="text/javascript" src="/app/scripts/directives/datepicker.directive.js"></script>
+
+  <!-- SERVICES -->
+  <script src="/services/user-data-service.js"></script>
+  <script src="/services/unit-data-service.js"></script>
+  <script src="/services/inquiry-data-service.js"></script>
+  <!--<script src="/services/email-verification.js"></script>-->
+
+
+</body>
+
+</html>
+
