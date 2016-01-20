@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin:0;padding:0}
+body {font-family:Arial, Helvetica, sans-serif}
+
+@font-face {
+    font-family: FranklinBook;
+    src: url(../fonts/FRABK.TTF);
+}
+
+
+
+ul {padding: 10px 0 10px 50px;}
+.noborder {border:none!important}
+.norightpad {padding-right:0!important}
+h2 {color:#00aeef;font-size:48px}
+h1, h2, h3, h4, h5 {font-family:FranklinBook, Arial, Helvetica, sans-serif;font-weight:normal}
+p {font-size:16px;line-height:26px}
+.clear {clear:both}
+.right-side {float:right}
+.left-side {float:left}
+.width-48 {width:48%;}
+.width-10 {width:10%;}
+.padright-2-percent {padding-right:2%}
+
+select {
+    width: 165px;
+    padding: 3px 8px 3px 0;
+    font-size: 16px;
+    border: 1px solid #77c043;
+}
+option {font-size:16px}
+
+
+
+section {clear:both}
+.container {width:1170px;margin:0 auto}
+header {background-color:#77c043;padding:15px 0 0 0}
+
+.logo-container {float:left;width:25%}
+.menu-container {float:right;color:#fff;width:75%}
+.top-menu {float:right;padding:0 0 37px 0;}
+.top-menu li{list-style:none;float:left;padding: 0 15px 0 15px;font-family:FranklinBook, Arial, Helvetica, sans-serif;}
+.main-menu {float:right;}
+.main-menu li{list-style: none;
+    float: left;
+    font-size: 18px;
+    padding: 0 25px 0 25px;
+    border-right: 1px solid #fff;
+	font-family:FranklinBook, Arial, Helvetica, sans-serif;}
+	
+.active-menu a {color:#fff;text-decoration:underline!important}
+	
+.main-menu li a,
+.top-menu li a{color:#fff;text-decoration:none}
+.main-menu li a:hover,
+.top-menu li a:hover {color:#fff;text-decoration:underline}
+.signup a {border-radius:20px;background-color:#fff;color:#77c043!important;font-weight:bold;padding: 5px 10px;border:1px solid #fff}
+.signup a:hover {color:#fff!important;background-color:#77c043!important;text-decoration:none!important;border:1px solid #fff}
+
+#main-image {background-image:url(../images/main-section-bg.jpg);background-repeat:repeat-x;background-position:top}
+.buttons-side  {padding:50px 0 0 0}
+.buttons-side img {clear:both;}
+.buttons-side a img {padding:20px 0 0 50px}
+
+#who-we-are {padding:40px 0}
+#get-started {background-color:#77c043;text-align:center;padding:28px 0}
+#get-started a {font-family:FranklinBook, Arial, Helvetica, sans-serif;font-size:30px;text-decoration:none;color:#fff;border:1px solid #fff;padding:10px 90px}
+#get-started a:hover {background-color:#fff;color:#77c043;border:1px solid #fff;}
+
+#start-search {text-align:center;padding:28px 0;}
+#start-search a {font-family:FranklinBook, Arial, Helvetica, sans-serif;font-size:16px;text-decoration:none;color:#fff;border:1px solid #fff;padding:10px 90px;background-color:#77c043}
+#start-search a:hover {background-color:#fff;color:#77c043;border:1px solid #77c043;}
+
+#how-it-works {background-color:#defcc9;padding:40px 0}
+#how-it-works h2{text-align:center;padding:0 0 30px 0}
+.steps {color:#00aeef;width:20%;float:left;text-align:center}
+.steps img{text-align:center}
+.steps h3{font-size:30px;font-weight:normal}
+.steps p{font-size:14px;line-height:20px;text-align:left}
+
+#safety-features {padding:40px 0}
+#safety-features h2{text-align:center;padding:0 0 42px 0}
+
+#blog {padding:40px 0}
+#blog h2{text-align:center;padding:0 0 42px 0}
+.blog-entry {width: 31%;float:left}
+.blog-entry img{}
+.blog-entry h3{color:#78c143;font-size:20px;line-height:24px;font-weight:normal;text-align: center;}
+.blog-entry p{color:#007dc5;font-size:16px;line-height:22px}
+
+.page-header {padding:40px 0;background-image:url(../images/main-section-bg.jpg);background-repeat:repeat-x;background-position:top}
+.page-header h1{color:#00aeef;font-size:48px}
+
+#i-need-a {padding:30px 0;}
+#i-need-a hr {border:2px solid #77c043;margin: 40px 0 0 0;}
+.search-choice {padding:0 0 30px 0}
+
+#begin-search {padding:30px 0;}
+#begin-search h2{font-size:32px;padding:0 0 40px 0}
+
+.select-box  {min-height:200px;width:25%;float:left}
+.select-box p {font-size:16px;padding:0 10px 0 0}
+
+footer {background-color:#4f4c4c;padding:20px 0;text-align:center;color:#fff}
+.footer-menu {display: inline-block;padding:0 0 25px 0}
+.footer-menu li{list-style: none;
+    float: left;
+    font-size: 16px;
+    padding: 0 25px 0 25px;
+    border-right: 1px solid #fff;}
+	
+.footer-menu li a{color:#fff;text-decoration:none}
+
+.footer-menu li a:hover {color:#fff;text-decoration:underline}
+
+.social-links a{padding:0 7px 0 0}
+
