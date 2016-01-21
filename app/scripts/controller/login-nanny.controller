@@ -1,6 +1,5 @@
 'use strict';
-//angular.module('app').controller('MainCtrl', function($rootScope, $scope, $state, $http, API_URL, UserDataService){
-angular.module('app').controller('MainCtrl', function($rootScope, $scope, $state, $http, API_URL){
+angular.module('app').controller('LogNannyCtrl', function($rootScope, $scope, $state, $http, API_URL, UserDataService){
 	var vm = this;
 
 	var user = {
@@ -10,8 +9,8 @@ angular.module('app').controller('MainCtrl', function($rootScope, $scope, $state
 	
 	//$scope.userName = $stateParams.userName;
 	//$scope.token = $stateParams.token;
-	//$scope.userDataService= UserDataService;
-	//$scope.userName = $scope.userDataService.getUserInfo().userName;
+	$scope.userDataService= UserDataService;
+	$scope.userName = $scope.userDataService.getUserInfo().userName;
 
 	if ($scope.userName != null && $scope.userName != ''){
 		$rootScope.$broadcast('USER_DEFINED', { username: $scope.userName })

@@ -12,8 +12,8 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
 
   $stateProvider.state('main', {
     url: '/',
-    templateUrl: '/views/main.html'
-    //controller: 'MainCtrl'
+    templateUrl: '/views/main.html',
+    controller: 'MainCtrl'
   });
 
   $urlRouterProvider.otherwise('/');
@@ -24,3 +24,6 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
 // 	function($scope){
 // 		$scope.myVar = "Hello Angular";
 // 	});
+
+//constants
+angular.module('app').constant('API_URL', 'http://localhost:3030/')
