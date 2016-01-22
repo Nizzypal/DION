@@ -1,0 +1,238 @@
+<div class="container">
+<!-- Navigation Side -->
+<div class="col-md-3">
+</div>
+
+<!-- Content Side -->
+<div class="col-md-9">
+	<div class="form-horizontal col-md-12">
+		<div class="row">
+			<div class="form-group">
+				<label for="firstname" class="control-label col-md-3 nanny-info-label">First Name:</label>
+				<div class="col-md-9">
+					<input type="text" id="firstname" class="form-control ">
+				</div>
+			</div>
+		</div>
+        <div class="row">
+			<div class="form-group">
+				<label for="middlename" class="control-label col-md-3 nanny-info-label">Middle Name:</label>
+				<div class="col-md-9">
+					<input type="text" id="middlename" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label for="lastname" class="control-label col-md-3 nanny-info-label">Last Name:</label>
+				<div class="col-md-9">
+					<input type="text" id="lastname" class="form-control">
+				</div>
+			</div>	
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label for="address" class="control-label col-md-3 nanny-info-label">Home Address:</label>
+				<div class="col-md-9">
+					<div class="col-md-7" style="padding-left: 0px;">
+						<input type="text" id="address" class="form-control ">
+					</div>
+					<div class="col-md-3" style="padding-left: 0px;">
+						<select class="form-control">
+							<option value="makati">Makati</option>
+							<option value="taguig">Taguig</option>
+						</select>
+					</div>
+					<div class="col-md-2 pull-right" style="padding-left: 0px;">
+						<input type="text" id="address" class="form-control " placeholder="Zip code">
+					</div>
+				</div>
+			</div>	
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label for="contactNo" class="control-label col-md-3 nanny-info-label">Contact Numeber:</label>
+				<div class="col-md-9">
+					<div class="col-md-1">
+						<label for="" class="control-label nanny-info-label-small">+63</label>
+					</div>
+					<div class="col-md-6" style="padding-left: 0px;">
+						<input type="text" id="contactNo" class="form-control" style="padding-left: 0px;">
+					</div>
+				</div>
+			</div>	
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label for="birthdate" class="control-label col-md-3 nanny-info-label">Birthdate</label>
+				<div class="col-md-9">
+					<label for="" class="control-label col-md-1">Month</label>
+					<div class="col-md-3">
+						<select class="form-control">
+							<option value="january">January</option>
+							<option value="february">February</option>
+						</select>						
+					</div>
+					<label for="" class="control-label col-md-1">Day</label>
+					<div class="col-md-3">
+						<select class="form-control">
+							<option value="1">1</option>
+							<option value="2">2</option>
+						</select>						
+					</div>			
+					<label for="" class="control-label col-md-1">Year</label>
+					<div class="col-md-3">
+						<select class="form-control">
+							<option value="1985">1985</option>
+							<option value="1986">1986</option>
+						</select>						
+					</div>			
+				</div>
+			</div>	
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label for="age" class="control-label col-md-3 nanny-info-label">Age:</label>
+				<div class="col-md-1">
+					<input type="text" id="age" class="form-control">
+				</div>
+			</div>		
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label for="birthdate" class="control-label col-md-3 nanny-info-label">Gender</label>
+				<div class="col-md-1">
+					<select class="form-control nanny-info-dropdown">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>						
+				</div>
+			</div>		
+		</div>		
+		<div class="row">
+			<div class="form-group">
+				<label for="birthdate" class="control-label col-md-3 nanny-info-label">Status</label>
+				<div class="col-md-1">
+    				<select class="form-control nanny-info-dropdown" ng-model="statusData.selectedOption" ng-options="status for status in statusData.availableOptions" ng-change="spouseDetailCheck()">
+     				</select>									
+				</div>
+			</div>		
+		</div>
+		<div class="row nanny-info-row-details" id="spouse-details">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<div class="row">
+						<label for="spouseName" class="control-label col-md-3 nanny-info-label">Spouse Name:</label>
+						<div class="col-md-9">
+							<input type="text" id="spouseName" class="form-control ">
+						</div>
+					</div>
+					<div class="row">
+						<label for="childrenNo" class="control-label col-md-3 nanny-info-label">No of Children:</label>
+						<div class="col-md-9">
+							<input type="number" id="childrenNo" class="form-control nanny-info-dropdown" placeholder="None">
+						</div>
+					</div>		
+					<div class="row">
+						<label for="ChildrenName" class="control-label col-md-3 nanny-info-label">Children's Name:</label>
+						<div class="col-md-9">
+							<input type="text" id="ChildrenName" class="form-control" placeholder="Enter names separated by comma">
+						</div>
+					</div>																		
+				</div>
+			</div>		
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-3 nanny-info-label">Education</label>
+			</div>		
+		</div>			
+		<div class="row row-details">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<div class="row">
+						<label for="college" class="control-label col-md-3 nanny-info-label">University or College:</label>
+						<div class="col-md-5">
+							<input type="text" id="college" class="form-control">
+						</div>
+						<label for="collegeGradYear" class="control-label col-md-2 nanny-info-gradYear">Year Graduated:</label>
+						<div class="col-md-2">
+							<input type="number" id="collegeGradYear" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<label for="hischool" class="control-label col-md-3 nanny-info-label">Highschool:</label>
+						<div class="col-md-5">
+							<input type="text" id="hischool" class="form-control">
+						</div>
+						<label for="hischoolGradYear" class="control-label col-md-2 nanny-info-gradYear">Year Graduated:</label>
+						<div class="col-md-2">
+							<input type="number" id="hischoolGradYear" class="form-control">
+						</div>						
+					</div>		
+					<div class="row">
+						<label for="elementary" class="control-label col-md-3 nanny-info-label">Elementary:</label>
+						<div class="col-md-5">
+							<input type="text" id="elementary" class="form-control">
+						</div>
+						<label for="elemGradYear" class="control-label col-md-2 nanny-info-gradYear">Year Graduated:</label>
+						<div class="col-md-2">
+							<input type="number" id="elemGradYear" class="form-control">
+						</div>							
+					</div>																		
+				</div>
+			</div>		
+		</div>					
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-3 nanny-info-label">Awards/Certification Received</label>
+			</div>		
+		</div>
+		<div class="row row-details">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
+					        <label class="control-label nanny-info-checkbox">
+					            <input type="checkbox" name="favoriteColors" ng-model="nannyAchievements.nurse"> Nurse
+					        </label>			          
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
+					        <label class="control-label nanny-info-checkbox">
+					            <input type="checkbox" name="favoriteColors" ng-model="nannyAchievements.teacher"> Teacher
+					        </label>			          
+						</div>
+				    </div>
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
+					        <label class="control-label nanny-info-checkbox">
+					            <input type="checkbox" name="favoriteColors" ng-model="nannyAchievements.socialworker"> Socialworker
+					        </label>			          
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
+					        <label class="control-label nanny-info-checkbox">
+					            <input type="checkbox" name="favoriteColors" ng-model="nannyAchievements.carfegiver"> Carfegiver
+					        </label>			          
+						</div>
+				    </div>	
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-5">
+					        <label class="control-label nanny-info-checkbox">
+					            <input type="checkbox" name="favoriteColors" ng-model="nannyAchievements.other"> Other
+					        </label>			          
+						</div>
+				    </div>																	
+				</div>
+			</div>		
+		</div>																							
+	</div>	
+</div>
+</div> <!-- container -->
