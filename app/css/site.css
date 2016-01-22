@@ -1,6 +1,8 @@
-/******************/
-/** Nanny Pofile **/
-/******************/
+/*****************************/
+/*****************************/
+/** Nanny Pofile Basic Info **/
+/*****************************/
+/*****************************/
 div.container {
 	min-width: 1200px;
 }
@@ -28,7 +30,7 @@ div.container {
 	padding-right: 0px;
 }
 
-.nanny-info-row-details{
+.nanny-info-row-details, #child-specialNeed{
 	display: none;
 }
 
@@ -44,4 +46,49 @@ div.container {
 
 .nav-pills > li > a {
     color: #000;
+}
+
+
+
+
+/*****************************/
+/*****************************/
+/** Mommy Pofile Basic Info **/
+/*****************************/
+/*****************************/
+.mommy-info-dropdown{
+	width: 130px;
+}
+
+.mommy-info-dropdown-number{
+	width: 60px;
+}
+
+.mommy-info-dropdown-bool{
+	width: 80px;
+}
+
+.mommy-info-radio{
+	display:inline-block
+}
+
+.mommy-info-checkbox{
+	text-align: left;
+    margin-left: 15px;
+}
+
+hr {
+border: 0;
+height: 3px;
+background: #77c043;
+/*background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+*/}
+
+
+/** Mommy Pofile Overides**/
+.btn:active {
+	background: #77c043;1
 }

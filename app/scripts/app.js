@@ -16,10 +16,16 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MainCtrl'
   });
 
-  $stateProvider.state('loginNanny', {
+  $stateProvider.state('nannyBasicinfo', {
     url: '/nanny-basicinfo',
-    templateUrl: '/views/login-nanny.html',
-    controller: 'LogNannyCtrl'
+    templateUrl: '/views/nanny-basicinfo.html',
+    controller: 'NannyBasicInfoCtrl'
+  });
+
+  $stateProvider.state('mommyBasicinfo', {
+    url: '/mommy-basicinfo',
+    templateUrl: '/views/mommy-basicinfo.html',
+    controller: 'MommyBasicInfoCtrl'
   });
 
   $urlRouterProvider.otherwise('/');
