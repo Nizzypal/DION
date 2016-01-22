@@ -1,5 +1,5 @@
 //angular.module('app', ['ngResource', 'ngRoute']);
-angular.module('app', ['ui.router']);
+angular.module('app', ['ui.router', 'ui.bootstrap']);
 
 //angular.module('app').config(function( $routeProvider, $locationProvider, $stateProvider){
 angular.module('app').config(function( $stateProvider, $urlRouterProvider){
