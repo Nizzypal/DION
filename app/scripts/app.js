@@ -16,6 +16,12 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MainCtrl'
   });
 
+  $stateProvider.state('loginNanny', {
+    url: '/login-nanny',
+    templateUrl: '/views/login-nanny.html',
+    controller: 'LogNannyCtrl'
+  });
+
   $urlRouterProvider.otherwise('/');
 
 });

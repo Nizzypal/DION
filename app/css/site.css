@@ -1,0 +1,35 @@
+/** Nanny Pofile **/
+div.container {
+	min-width: 1200px;
+}
+
+.nanny-info-label{
+	text-align: left !important;
+}
+
+.nanny-info-label-small{
+	float: right;
+}
+
+.nanny-info-dropdown{
+	width: 100px;
+}
+
+.nanny-info-detailbox{
+    border-style: solid;
+    border-width: thin;
+    border-color: #77c043
+}
+
+.nanny-info-gradYear{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.nanny-info-row-details{
+	display: none;
+}
+
+.nanny-info-checkbox{
+	text-align: center;
+}
