@@ -1,4 +1,6 @@
+/******************/
 /** Nanny Pofile **/
+/******************/
 div.container {
 	min-width: 1200px;
 }
@@ -32,4 +34,14 @@ div.container {
 
 .nanny-info-checkbox{
 	text-align: center;
+}
+
+/** Nanny Pofile Overides**/
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #77c043;
+}
+
+.nav-pills > li > a {
+    color: #000;
 }
