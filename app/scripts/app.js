@@ -17,7 +17,7 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
   });
 
   $stateProvider.state('loginNanny', {
-    url: '/login-nanny',
+    url: '/nanny-basicinfo',
     templateUrl: '/views/login-nanny.html',
     controller: 'LogNannyCtrl'
   });
