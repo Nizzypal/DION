@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').controller('LogNannyCtrl', function($scope, API_URL){
+angular.module('app').controller('NannyBasicInfoCtrl', function($scope, API_URL){
 	var vm = this;
 
 	var user = {

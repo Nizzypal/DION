@@ -1,0 +1,149 @@
+<div class="container">
+<!-- Navigation Side -->
+<div class="col-md-3">
+</div>
+
+<!-- Content Side -->
+<div class="col-md-9">
+	<div class="form-horizontal col-md-12">
+		<div class="row">
+			<div class="form-group">
+				<label for="birthdate" class="control-label col-md-3 nanny-info-label">I need a nanny for</label>
+				<div class="col-md-2">
+    				<select class="form-control mommy-info-dropdown" ng-model="careSeekerData.selectedOption" ng-options="status.text for status in careSeekerData.availableOptions track by status.id" ng-change="serviceCheck()" ng-value="{{careSeekerData.selectedOption}}">
+     				</select>									
+				</div>					
+			</div>		
+		</div>		
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-5 nanny-info-label">People in your family needing care</label>
+			</div>		
+		</div>				
+		<div class="row mommy-info-row-details" id="child-details">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<div class="row">
+						<label for="spouseName" class="control-label col-md-4 nanny-info-label">Tell us more about them...</label>
+					</div>					
+					<div class="row">
+						<label for="childrenNo" class="control-label col-md-3 nanny-info-label">No of Children:</label>
+						<div class="col-md-9">
+							<input type="number" id="childrenNo" class="form-control mommy-info-dropdown-number" ng-model="careSeekerData.childrenNo">
+						</div>
+					</div>		
+					<div class="row">
+						<label for="ChildrenAge" class="control-label col-md-12 nanny-info-label">Age of Children:</label>
+						<div class="col-md-9"> 
+							<div ng-repeat="child in getNoChildren(careSeekerData.childrenNo) track by $index" class="row">
+								<div class="col-md-1"></div>
+								<label for="" class="control-label col-md-3 nanny-info-label">Child no {{$index+1}}:</label>
+								<div class="col-md-3">
+									<input type="number" id="" class="form-control mommy-info-dropdown-number">
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="row">
+						<label for="children-specialNeed" class="control-label col-md-6 nanny-info-label">Is there a person with Special Needs/Conditions:</label>
+						<div class="col-md-6">
+							<select id="children-specialNeed" class="form-control mommy-info-dropdown-bool" ng-model="careSeekerData.specialNeeds" ng-change="specialNeedsCheck()">
+								<option value="true">Yes</option>
+								<option value="false">No</option>
+							</select>	
+						</div>
+						<div id="child-specialNeed">
+							<label for="specialNeed" class="control-label col-md-5 nanny-info-label">Please speicfy Needs/Conditions:</label>
+							<div class="col-md-7">
+								<input type="text" id="specialNeed" class="form-control" placeholder="(Autisim, ADHD, etc)">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-3 nanny-info-label">	</label>
+			</div>		
+		</div>			
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<label class="control-label col-md-12 nanny-info-label">How often Do you need Care:</label>
+					<div class="col-md-12"> 
+				        <div class="radio col-md-6">
+				            <label>
+				                <input type="radio" class="mommy-info-radio" name="fulltime" value="fulltime" ng-model="careSeekerData.frequency">
+				                Full Time
+				            </label>
+				        </div>
+				        <div class="radio">
+				            <label>
+				                <input type="radio" class="mommy-info-radio" name="partime" value="partime" ng-model="careSeekerData.frequency">
+				                Part Time
+				            </label>
+				        </div>
+						<hr>				
+					</div>
+					<label class="control-label col-md-12 nanny-info-label">Schedule:</label>
+					<div class="col-md-12"> 
+				        <div class="radio col-md-6">
+				            <label>
+				                <input type="radio" class="mommy-info-radio" name="regular" value="regular" ng-model="careSeekerData.schedule">
+				                Regular
+				            </label>
+				        </div>
+				        <div class="radio">
+				            <label>
+				                <input type="radio" class="mommy-info-radio" name="onetime" value="onetime" ng-model="careSeekerData.schedule">
+				                One Time
+				            </label>
+				        </div>
+					</div>	
+				    <div class="col-md-12">
+				        <div class="col-md-6">
+				        	<label class="control-label col-md-12 nanny-info-label">Start Date:</label>
+				            <p class="input-group">
+				              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+				              <span class="input-group-btn">
+				                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+				              </span>
+				            </p>
+				        </div>
+
+				        <div class="col-md-6">
+				        	<label class="control-label col-md-12 nanny-info-label">End Date:</label>
+				            <p class="input-group">
+				              <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+				              <span class="input-group-btn">
+				                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+				              </span>
+				            </p>
+				        </div>
+			    	</div>		
+			    	<div class="col-md-12">
+					    <div class="form-group col-md-6">
+					        <label class="control-label mommy-info-checkbox">
+					            <input type="checkbox" ng-true-value="'asap'" ng-model="careSeekerData.urgency" ng-change="urgencyChange()" > I need a nanny ASAP
+					        </label>			          
+						</div>
+					    <div class="form-group col-md-6">
+					        <label class="control-label mommy-info-checkbox">
+					            <input type="checkbox" ng-true-value="'flexible'" ng-model="careSeekerData.urgency" ng-change="urgencyChange()" > Start date is flexible
+					        </label>	
+					    </div>		          
+				    </div>		    																																	
+				</div>			
+			</div>			
+		</div>								
+		<div class="btn-group-vertical pull-right" role="group" aria-label="...">
+		  <button type="button" class="btn btn-default">Continue</button>
+		  <button type="button" class="btn btn-default">Skip this Step</button>
+		</div>		
+																						
+	</div>	
+</div>
+</div> <!-- container -->
