@@ -26,25 +26,47 @@
 				<div class="col-md-10 nanny-info-detailbox">
 					<div class="row">
 						<label for="spouseName" class="control-label col-md-4 nanny-info-label">Tell us more about them...</label>
-					</div>					
-					<div class="row">
-						<label for="childrenNo" class="control-label col-md-3 nanny-info-label">No of Children:</label>
-						<div class="col-md-9">
-							<input type="number" id="childrenNo" class="form-control mommy-info-dropdown-number" ng-model="careSeekerData.childrenNo">
-						</div>
-					</div>		
-					<div class="row">
-						<label for="ChildrenAge" class="control-label col-md-12 nanny-info-label">Age of Children:</label>
-						<div class="col-md-9"> 
-							<div ng-repeat="child in getNoChildren(careSeekerData.childrenNo) track by $index" class="row">
-								<div class="col-md-1"></div>
-								<label for="" class="control-label col-md-3 nanny-info-label">Child no {{$index+1}}:</label>
-								<div class="col-md-3">
-									<input type="number" id="" class="form-control mommy-info-dropdown-number">
+					</div>	
+					<div id="child-repeater">
+						<div class="row">
+							<label for="childrenNo" class="control-label col-md-3 nanny-info-label">No of Children:</label>
+							<div class="col-md-9">
+								<input type="number" id="childrenNo" class="form-control mommy-info-dropdown-number" ng-model="careSeekerData.childrenNo">
+							</div>
+						</div>		
+						<div class="row">
+							<label for="ChildrenAge" class="control-label col-md-12 nanny-info-label">Age of Children:</label>
+							<div class="col-md-9"> 
+								<div ng-repeat="child in getNoChildren(careSeekerData.childrenNo) track by $index" class="row">
+									<div class="col-md-1"></div>
+									<label for="" class="control-label col-md-3 nanny-info-label">Child no {{$index+1}}:</label>
+									<div class="col-md-3">
+										<input type="number" id="" class="form-control mommy-info-dropdown-number">
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>	
+						</div>	
+					</div>		
+					<div id="elderly-repeater">
+						<div class="row">
+							<label for="childrenNo" class="control-label col-md-3 nanny-info-label">No of Elderly:</label>
+							<div class="col-md-9">
+								<input type="number" id="childrenNo" class="form-control mommy-info-dropdown-number" ng-model="careSeekerData.childrenNo">
+							</div>
+						</div>		
+						<div class="row">
+							<label for="ChildrenAge" class="control-label col-md-12 nanny-info-label">Age of Elderly:</label>
+							<div class="col-md-9"> 
+								<div ng-repeat="child in getNoChildren(careSeekerData.childrenNo) track by $index" class="row">
+									<div class="col-md-1"></div>
+									<label for="" class="control-label col-md-3 nanny-info-label">Elderly no {{$index+1}}:</label>
+									<div class="col-md-3">
+										<input type="number" id="" class="form-control mommy-info-dropdown-number">
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>								
 					<div class="row">
 						<label for="children-specialNeed" class="control-label col-md-6 nanny-info-label">Is there a person with Special Needs/Conditions:</label>
 						<div class="col-md-6">
@@ -71,34 +93,32 @@
 		<div class="row">
 			<div class="form-group">
 				<div class="col-md-1"></div>
-				<div class="col-md-10 nanny-info-detailbox">
+				<div class="col-md-10 nanny-info-detailbox">					
 					<label class="control-label col-md-12 nanny-info-label">How often Do you need Care:</label>
-					<div class="col-md-12"> 
-				        <div class="radio col-md-6">
-				            <label>
-				                <input type="radio" class="mommy-info-radio" name="fulltime" value="fulltime" ng-model="careSeekerData.frequency">
+					<div class="form-group col-md-12"> 
+				        <div class="radio col-md-12">
+				            <label class="col-md-6">
+				                <input type="radio" class="mommy-info-radio" value="fulltime" ng-model="careSeekerData.frequency" ng-change="chechRadio(careSeekerData.frequency)">
 				                Full Time
 				            </label>
-				        </div>
-				        <div class="radio">
-				            <label>
-				                <input type="radio" class="mommy-info-radio" name="partime" value="partime" ng-model="careSeekerData.frequency">
+				            <label class="col-md-6">
+				                <input type="radio" class="mommy-info-radio" value="partime" ng-model="careSeekerData.frequency" ng-change="chechRadio(careSeekerData.frequency)">
 				                Part Time
 				            </label>
 				        </div>
-						<hr>				
+					</div>
+					<div class="col-md-12">
+						<hr>
 					</div>
 					<label class="control-label col-md-12 nanny-info-label">Schedule:</label>
-					<div class="col-md-12"> 
-				        <div class="radio col-md-6">
-				            <label>
-				                <input type="radio" class="mommy-info-radio" name="regular" value="regular" ng-model="careSeekerData.schedule">
+					<div class="form-group col-md-12">  
+				        <div class="radio col-md-12">
+				        	<label class="col-md-6">
+				                <input type="radio" class="mommy-info-radio" value="regular" ng-model="careSeekerData.schedule">
 				                Regular
 				            </label>
-				        </div>
-				        <div class="radio">
-				            <label>
-				                <input type="radio" class="mommy-info-radio" name="onetime" value="onetime" ng-model="careSeekerData.schedule">
+				        	<label class="col-md-6">
+				                <input type="radio" class="mommy-info-radio" value="onetime" ng-model="careSeekerData.schedule">
 				                One Time
 				            </label>
 				        </div>
@@ -140,7 +160,7 @@
 			</div>			
 		</div>								
 		<div class="btn-group-vertical pull-right" role="group" aria-label="...">
-		  <button type="button" class="btn btn-default">Continue</button>
+		  <button type="button" class="btn btn-default" ng-click="clickContinue(2)">Continue</button>
 		  <button type="button" class="btn btn-default">Skip this Step</button>
 		</div>		
 																						

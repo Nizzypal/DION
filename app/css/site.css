@@ -30,7 +30,7 @@ div.container {
 	padding-right: 0px;
 }
 
-.nanny-info-row-details, #child-specialNeed{
+.nanny-info-row-details{
 	display: none;
 }
 
@@ -77,18 +77,52 @@ div.container {
     margin-left: 15px;
 }
 
+.seeker-info-label{
+	text-align: left !important;
+}
+
+.seeker-info{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#child-specialNeed, #elderly-repeater{
+	display: none;
+}
+
 hr {
-border: 0;
-height: 3px;
-background: #77c043;
-/*background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
-*/}
+	border: 0;
+	height: 3px;
+	background: #77c043;
+	margin-top: -5px;
+	margin-bottom: -5px
+}
+
+/** Calendar **/
+.mommy-info-calendar-header,.mommy-info-calendar-header-big{
+	text-align: center !important;
+	vertical-align: middle !important;
+}
+
+.mommy-info-calendar-header-big{
+    width: 40%;	
+}
+
+.mommy-info-calendar-checkbox{
+	text-align: center !important;
+	padding-right: 10px;
+}
 
 
 /** Mommy Pofile Overides**/
 .btn:active {
 	background: #77c043;1
+}
+
+.table tbody tr:hover{
+	background-color: #77c043;
+}
+
+.table tbody tr td:hover{
+	background-color: darkgreen;
 }

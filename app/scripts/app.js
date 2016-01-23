@@ -28,6 +28,12 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MommyBasicInfoCtrl'
   });
 
+    $stateProvider.state('mommyBasicinfo2', {
+    url: '/mommy-basicinfo-2',
+    templateUrl: '/views/mommy-basicinfo-2.html',
+    controller: 'MommyBasicInfoCtrl'
+  });
+
   $urlRouterProvider.otherwise('/');
 
 });
