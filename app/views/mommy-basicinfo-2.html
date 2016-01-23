@@ -1,0 +1,165 @@
+<div class="container">
+<!-- Navigation Side -->
+<div class="col-md-3">
+</div>
+
+<!-- Content Side -->
+<div class="col-md-9">
+	<div class="form-horizontal col-md-12">				
+		<div class="row mommy-info-row-details" id="child-details">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<div class="row">
+						<label for="spouseName" class="control-label col-md-4 nanny-info-label">Time</label>
+					</div>	
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">						
+							<table class="table table-striped table-bordered table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="mommy-info-calendar-header-big cold-md-5">Select All</th>
+										<th ng-repeat="day in dayObjectArray track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-header">{{dayObjectArray[$index].name}}</div>
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].selected" ng-change="">
+										        </label>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[0].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[0].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[1].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[1].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[2].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[2].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[3].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[3].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[4].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[4].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[5].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[5].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>
+									<tr>
+										<td class="mommy-info-calendar-header-big cold-md-5">{{dayObjectArray[0].timePeriods[6].period}}</td>
+										<td ng-repeat="day in days track by $index" class="cold-md-1">
+											<div class="mommy-info-calendar-checkbox">
+										        <label class="control-label mommy-info-checkbox">
+										            <input type="checkbox" ng-true-value="true" ng-false-value="false" ng-model="dayObjectArray[$index].timePeriods[6].selected" ng-change="">
+										        </label>
+											</div>
+										</td>									
+									</tr>																																																
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-1"></div>
+					</div>							
+				</div>
+			</div>		
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-3">	</label>
+			</div>		
+		</div>			
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<label for="children-specialNeed" class="control-label col-md-12 nanny-info-label">Location:</label>
+					<div class="col-md-8">
+						<select id="" class="form-control mommy-info-dropdown col-md-6" ng-model="careSeekerData.specialNeeds" ng-change="specialNeedsCheck()">
+							<option value="true">Yes</option>
+							<option value="false">No</option>
+						</select>	
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Enter ZIP Code">
+						</div>
+					</div>					
+				</div>	
+			</div>			
+		</div>		
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-3">	</label>
+			</div>		
+		</div>			
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 nanny-info-detailbox">
+					<label for="" class="control-label col-md-12 nanny-info-label">Rate:</label>
+					<div class="col-md-10">
+						<label for="rate" class="control-label col-md-1 seeker-info seeker-info-label">P</label>
+						<div class="col-md-5 seeker-info">
+							<input type="text" id="rate" class="form-control" placeholder="Enter ZIP Code">
+						</div>
+						<label for="ratePerio" class="control-label col-md-1 nanny-info-label">per:</label>
+						<select id="ratePerio" class="form-control mommy-info-dropdown col-md-5" ng-model="careSeekerData.specialNeeds" ng-change="specialNeedsCheck()">
+							<option value="day">Day</option>
+							<option value="hour">Hour</option>
+						</select>	
+					</div>					
+				</div>	
+			</div>			
+		</div>									
+		<div class="btn-group-vertical pull-right" role="group" aria-label="...">
+		  <button type="button" class="btn btn-default">Continue</button>
+		  <button type="button" class="btn btn-default">Skip this Step</button>
+		</div>		
+																						
+	</div>	
+</div>
+</div> <!-- container -->

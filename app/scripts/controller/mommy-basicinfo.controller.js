@@ -1,6 +1,249 @@
 'use strict';
-angular.module('app').controller('MommyBasicInfoCtrl', function($scope, API_URL){
+angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, API_URL){
 	var vm = this;
+
+  $scope.days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  $scope.dayObjectArray = [
+    {
+      name: 'Sun',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    },
+    {
+      name: 'Mon',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    },
+    {
+      name: 'Tue',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    },    
+    {
+      name: 'Wed',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    },    
+    {
+      name: 'Thu',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    }, 
+    {
+      name: 'Fri',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    },    
+    {
+      name: 'Sat',
+      selected: false,
+      timePeriods: [
+        {
+          period: 'Early Morning',
+          selected: false
+        },
+        {
+          period: 'Late Morning',
+          selected: false
+        },
+        {
+          period: 'Early Afternoon',
+          selected: false
+        },
+        {
+          period: 'Late Afternoon',
+          selected: false
+        },
+        {
+          period: 'Early Evening',
+          selected: false
+        },
+        {
+          period: 'Late Evening',
+          selected: false
+        },
+        {
+          period: 'Overnight',
+          selected: false
+        }                                        
+      ]
+    }    
+  ];
 
 	$scope.careSeekerData = {
 	    availableOptions: [
@@ -23,12 +266,22 @@ angular.module('app').controller('MommyBasicInfoCtrl', function($scope, API_URL)
 		 urgency: "asap"
     };
 
-	$scope.serviceCheck = function(){
-		if ($scope.careSeekerData.selectedOption.id == 1){
-			$('#child-details').show();
-		}
-		else $('#child-details').hide(); 
-	};
+  $scope.serviceCheck = function(){
+  	if ($scope.careSeekerData.selectedOption.id == 1){
+  		//$('#child-details').show();
+      $('#child-repeater').show();
+      $('#elderly-repeater').hide();
+  	}
+  	else {
+      //$('#child-details').hide(); 
+      $('#child-repeater').hide();
+      $('#elderly-repeater').show();
+    }
+  };
+
+  $scope.chechRadio = function(value){
+
+  };
 
 	$scope.specialNeedsCheck = function(){
 		if ($scope.careSeekerData.specialNeeds == "true"){
@@ -46,6 +299,12 @@ angular.module('app').controller('MommyBasicInfoCtrl', function($scope, API_URL)
 	$scope.getNoChildren = function(childrenNo){
 		return new Array(childrenNo);
 	};
+
+  $scope.clickContinue = function(stateNo){
+    if (stateNo == 2){
+      $state.go("mommyBasicinfo2");   
+    }
+  };
 
 
 
