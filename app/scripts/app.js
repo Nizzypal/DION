@@ -35,9 +35,9 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MommyBasicInfoCtrl'
   });
 
- $stateProvider.state('main', {
+ $stateProvider.state('temp', {
     url: '/',
-    templateUrl: '/views/temp.html'
+    templateUrl: '/views/templates/temp.html'
   });
 
 
