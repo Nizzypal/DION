@@ -11,7 +11,8 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
 	// 	}); 
 
   $stateProvider.state('main', {
-    url: '/',
+    //url: '/',
+    url: '/main',
     templateUrl: '/views/main.html',
     controller: 'MainCtrl'
   });
@@ -33,6 +34,12 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     templateUrl: '/views/mommy-basicinfo-2.html',
     controller: 'MommyBasicInfoCtrl'
   });
+
+ $stateProvider.state('temp', {
+    url: '/',
+    templateUrl: '/views/templates/temp.html'
+  });
+
 
   $urlRouterProvider.otherwise('/');
 
