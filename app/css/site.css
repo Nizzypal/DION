@@ -173,3 +173,7 @@ input[type=checkbox].login-checkbox {
     color: white;
     background-color: #77c043;
 }
+
+.modal-footer{
+	border-top: 0px;
+}
