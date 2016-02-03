@@ -126,3 +126,50 @@ hr {
 .table tbody tr td:hover{
 	background-color: darkgreen;
 }
+
+
+/*****************************/
+/*****************************/
+/** Login **/
+/*****************************/
+/*****************************/
+.login-control{
+	height: 40px;
+    font-size: medium;
+}
+
+.modal-close{
+	font-size: 30px;
+	font-size: 3vw;
+	opacity: 1;
+	color: #77c043;
+}
+
+.login-label{
+	font-size: medium;
+}
+
+.login-input{
+	margin-top: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #77c043	
+}
+
+input[type=checkbox].login-checkbox {
+
+ -ms-transform: scale(1.5); /* IE */
+ -moz-transform: scale(1.5); /* FF */
+ -webkit-transform: scale(1.5); /* Safari and Chrome */
+ -o-transform: scale(1.5); /* Opera */
+  /*padding: 10px;*/
+	margin-right: 5px;
+    margin-left: 3px;    
+}
+
+.login-button{
+    margin-top: 20px;
+    margin-bottom: 60px;	
+    color: white;
+    background-color: #77c043;
+}

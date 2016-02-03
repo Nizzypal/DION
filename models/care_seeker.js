@@ -13,6 +13,8 @@ var careSeekerSchema = new mongoose.Schema({
 	gender: String,
 	status: String,
 	email: String,
+    password: String,
+
 
 	//Transaction Info
 	serviceNeeded: String,
