@@ -54,6 +54,16 @@ else {
 mongoose.connect('mongodb://jon:nazpal6180@ds047085.mongolab.com:47085/dion');
 }
 
+
+function encrypt(str){
+    var encryptedAES = CryptoJS.AES.encrypt("Message", "Secret Passphse");
+
+    var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+
+    decrypted.toString(CryptoJS.enc.Utf8);
+}
+
+
 //mongoDB
 console.log('mongoose-' + mongoose.version);
 //mongoose.connect('mongodb://localhost/DION');
