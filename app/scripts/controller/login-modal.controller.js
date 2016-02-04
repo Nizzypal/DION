@@ -4,16 +4,14 @@ angular.module('app').controller('LoginCtrl', function($scope, $uibModalInstance
 
     var user = {
         email:'',
-        password:''
+        password:'',
+        remember: false
     };
     
-  $scope.items = {};
-  $scope.selected = {
-    //item: $scope.items[0]
-  };
+  $scope.user = user;
 
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
+  $scope.login = function () {
+    $uibModalInstance.close($scope.user);
   };
 
   $scope.close = function () {
