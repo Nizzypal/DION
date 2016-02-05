@@ -12,7 +12,7 @@ angular.module('app')
             address:'',
             number:'',
             subject:'',
-            message:''            
+            message:'',           
             remember: ''
         };
 
@@ -24,15 +24,15 @@ angular.module('app')
                 UserInfo.email = value.email;
                 UserInfo.password = value.password;
                 UserInfo.remember = value.remember;    
-            }
+            },
             setContactInfo: function(value){
-                UserInfo.firstname = value.
-                UserInfo.middlename = value.
-                UserInfo.lastname = value.
-                UserInfo.address:'',
-                UserInfo.number:'',
-                UserInfo.subject:'',
-                UserInfo.message:''            
+                UserInfo.firstname = value.firstname,
+                UserInfo.middlename = value.middlename,
+                UserInfo.lastname = value.lastname,
+                UserInfo.address = value.address,
+                UserInfo.number = value.number,
+                UserInfo.subject = value.subject,
+                UserInfo.message = value.message
             }
         };
 
