@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').controller('LoginCtrl', function($scope, $uibModalInstance){
+angular.module('app').controller('LoginCtrl', function($scope, $state, $uibModalInstance){
     var vm = this;
 
     var user = {
@@ -17,6 +17,11 @@ angular.module('app').controller('LoginCtrl', function($scope, $uibModalInstance
   $scope.close = function () {
     $uibModalInstance.dismiss('cancel');
   };
+
+  $scope.forgot = function(){
+    $uibModalInstance.dismiss('cancel');
+    $state.go('forgot');
+  }
 
 
 });
