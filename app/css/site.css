@@ -3,6 +3,12 @@
    	margin-bottom: 20px;		
 }
 
+.content-indent{
+	margin-left: 35px;
+}
+
+.spacer20{height:20px;}
+
 .reset-button{
 	height: 3vw;
 	width: 6vw;
@@ -16,6 +22,39 @@
 	padding: 12px;
 	margin-left: 25px;
 }
+
+
+/*****************************/
+/*****************************/
+/** Fonts **/
+/*****************************/
+/*****************************/
+.rage {
+	font-family:'Rage';
+	color: #00aeef;
+	font-size: 3vw;
+}
+.frank {
+	font-family:'FrankGothicBook';
+	color: #77c043;
+	font-size: 2vw;
+}
+
+@font-face {
+  font-family: 'FrankGothicBook';
+/*  src: url('/fonts/Aleo-Bold_gdi.eot');
+  src: url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.eot?#iefix') format('embedded-opentype'), 
+       url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.woff') format('woff'), */
+	src: url('fonts/FRAKB.ttf')  format('truetype'),
+}
+@font-face {
+  font-family: 'Rage';
+/*  src: url('/fonts/Aleo-Bold_gdi.eot');
+  src: url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.eot?#iefix') format('embedded-opentype'), 
+       url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.woff') format('woff'), */
+	src: url('fonts/RAGE.ttf')  format('truetype'),
+}
+
 
 /*****************************/
 /*****************************/
