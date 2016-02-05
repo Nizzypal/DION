@@ -12,14 +12,14 @@
 		<div class="row">
 			<div class="form-group">
 				<div class="col-md-12">
-					<input type="text" id="email" class="form-control login-control login-input" placeholder="Email">
+					<input type="text" id="email" class="form-control login-control login-input" placeholder="Email" ng-model="user.email">
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group">
 				<div class="col-md-12">
-					<input type="text" id="password" class="form-control login-control login-input" placeholder="Password">
+					<input type="text" id="password" class="form-control login-control login-input" placeholder="Password" ng-model="user.password">
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 			<div class="form-group">
 				<div class="col-md-12">
 					<label class="login-label">
-						<input type="checkbox" name="" class="login-checkbox" ng-model="nannyAchievements.other"> Remember Me
+						<input type="checkbox" name="" class="login-checkbox" ng-model="user.remember"> Remember Me
 					</label>	
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 		<div class="row">
 		</div>
 		<div class="row">
-			<button type="button" class="btn col-md-12 login-control login-button">LOG IN</button>
+			<button type="button" class="btn col-md-12 login-control login-button" ng-click="login()">LOG IN</button>
 		</div>				
 		<div class="row">
 			<label class="login-label">By loggin in you agree to our <a href="">terms of use</a></label>

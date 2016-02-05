@@ -1,0 +1,71 @@
+<div class="ccontainer form-horizontal col-md-12">
+	<div class="col-md-2">
+	</div>
+	<div class="col-md-8">
+		<div class="row">
+		    <h3 class="modal-title">Contact Us</h3>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-4">
+					<label for="firstname" class="control-labe;">First Name:</label>
+					<input type="text" id="firstname" class="form-control contact-control" ng-model="user.firstname">
+				</div>
+				<div class="col-md-4">
+					<label for="middlename" class="control-labe;">Middle Name:</label>
+					<input type="text" id="middlename" class="form-control contact-control" ng-model="user.middlename">
+				</div>
+				<div class="col-md-4">
+					<label for="lastname" class="control-labe;">Last Name:</label>
+					<input type="text" id="lastname" class="form-control contact-control" ng-model="user.lastname">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					<label for="address" class="control-label">Home Address:</label>
+					<input type="text" id="address" class="form-control contact-control" ng-model="user.address">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-6">
+					<label for="telNo" class="control-label">Telephone/Cell No:</label>
+					<input type="text" id="telNo" class="form-control contact-control" ng-model="user.number">
+				</div>
+				<div class="col-md-6">
+					<label for="email" class="control-label">Email:</label>
+					<input type="text" id="email" class="form-control contact-control" ng-model="user.email">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					<label for="subject" class="control-label">Subejct:</label>
+					<input type="text" id="subject" class="form-control contact-control" ng-model="user.subject">
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-12">
+					<label for="msg" class="control-label">Message:</label>
+					<textarea id="msg" class="col-md-12 contact-textarea contact-control" rows="4" name="myname" placeholder="Type you message here" ng-model="user.message">
+					</textarea>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5"></div>
+			<div class="col-md-2">
+				<button type="button" class="btn col-md-12 contact-button" ng-click="send()">SEND</button>
+			</div>
+			<div class="col-md-5"></div>
+		</div>				
+	</div>
+	<div class="col-md-2">
+	</div>
+</div>

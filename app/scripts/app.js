@@ -18,6 +18,14 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MainCtrl'
   });
 
+  $stateProvider.state('contactUs', {
+    //url: '/',
+    url: '/contact',
+    templateUrl: '/views/contact.html',
+    //templateUrl: '/views/login.html',
+    controller: 'ContactCtrl'
+  });
+
   $stateProvider.state('nannyBasicinfo', {
     url: '/nanny-basicinfo',
     templateUrl: '/views/nanny-basicinfo.html',
