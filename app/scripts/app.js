@@ -18,6 +18,14 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MainCtrl'
   });
 
+  $stateProvider.state('forgot', {
+    //url: '/',
+    url: '/forgot',
+    templateUrl: '/views/forgot.html',
+    //templateUrl: '/views/login.html',
+    controller: 'ForgotCtrl'
+  });
+
   $stateProvider.state('contactUs', {
     //url: '/',
     url: '/contact',

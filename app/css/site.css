@@ -1,3 +1,22 @@
+.content-header-spacer-20 {
+   	margin-top: 20px;
+   	margin-bottom: 20px;		
+}
+
+.reset-button{
+	height: 3vw;
+	width: 6vw;
+	color: white;
+    background-color: #77c043;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+.common-middle-text{
+	padding: 12px;
+	margin-left: 25px;
+}
+
 /*****************************/
 /*****************************/
 /** Nanny Pofile Basic Info **/
