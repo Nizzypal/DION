@@ -29,6 +29,10 @@ angular.module('app').directive('login', function(){
 
                 };
 
+                $scope.signup = function(){
+                    $state.go("generalSignUp");
+                }
+
             },
             link: function($scope, $element, $attrs, $controller){
                  

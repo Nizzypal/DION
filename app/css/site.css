@@ -8,6 +8,7 @@
 }
 
 .spacer20{height:20px;}
+.spacer10{height:10px;}
 
 .reset-button{
 	height: 3vw;
@@ -23,6 +24,25 @@
 	margin-left: 25px;
 }
 
+.common-remove-upper-indent{
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+}
+
+.common-remove-left-indent{
+	padding-left: 0px !important;
+	margin-left: 0px !important;
+}
+
+.common-remove-right-indent{
+	padding-right: 0px !important;
+	margin-right: 0px !important;
+}
+
+
+.common-right-indent{
+	margin-right: 5px !important;
+}
 
 /*****************************/
 /*****************************/
@@ -266,4 +286,18 @@ input[type=checkbox].login-checkbox {
     color: white;
     background-color: #77c043;
     font-weight: bold;
+}
+
+
+/*****************************/
+/*****************************/
+/** General Sign Up **/
+/*****************************/
+/*****************************/
+.general-rage-nanny{
+	font-size: 2vw;
+}
+
+.general-frank{
+	font-size: 2vw;
 }
