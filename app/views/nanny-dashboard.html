@@ -1,0 +1,71 @@
+<div class="container">
+	<div dashboard-navbar class="col-md-3 common-remove-left-indent">
+	</div>
+	<div class="col-md-9">
+		<div class="row">
+			<h3 class="col-md-10">Find a Nanny Job</h2>
+			<a href=""><span class="pull-right glyphicon glyphicon-cog common-right-icon common-upper-indent common-left-indent10"></span></a>
+			<a href=""><span class="pull-right glyphicon glyphicon-cog common-right-icon common-upper-indent common-left-indent10"></span></a>
+		</div>	
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label"><label>
+			</div>		
+		</div>			
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-3 common-remove-left-indent">
+					<label for="email" class="col-md-5 control-label common-remove-left-indent common-remove-right-indent dashboard-search-label">Posting</label>
+					<select class="col-md-7 form-control-sm contact-control pull-left" ng-model="user.location">
+						<option value="makati">Makati</option>
+						<option value="taguig">Taguig</option>
+					</select>
+				</div>			
+				<div class="col-md-3 common-remove-left-indent">
+					<label for="email" class="col-md-5 control-label common-remove-left-indent common-remove-right-indent dashboard-search-label">Job Type</label>
+					<select class="col-md-7 form-control-sm contact-control pull-left" ng-model="user.location">
+						<option value="makati">Makati</option>
+						<option value="taguig">Taguig</option>
+					</select>
+				</div>			
+				<div class="col-md-3 common-remove-left-indent common-remove-right-indent">
+					<label for="email" class="col-md-5 control-label common-remove-left-indent common-remove-right-indent dashboard-search-label">Location</label>
+					<select class="col-md-7 form-control-sm contact-control pull-left" ng-model="user.location">
+						<option value="makati">Makati</option>
+						<option value="taguig">Taguig</option>
+					</select>
+				</div>			
+				<div class="col-md-3 common-remove-left-indent pull-right common-remove-right-indent">
+					<button type="button" class="btn btn-sm col-md-6 dashboard-button pull-right" ng-click="search()">Search</button>
+				</div>			
+			</div>			
+		</div>
+		<div class="row spacer20">
+		</div>
+		<div class="row">
+			<div class="col-md-12 common-remove-right-indent">
+				<hr class="dashboard">
+			</div>		
+		</div>			
+		<div class="row spacer20">
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<div class="form-group">
+					<img id='blah' class="col-md-12" src='' alt='your image'/>
+					<input id="pix" class="pix-control" type="file" fileread="user.photo"/>
+					<div class="col-md-4"></div>
+					<button class="col-md-4 btn" ng-click="uploadPhoto()"><span class="glyphicon glyphicon-camera"></span></button>
+					<div class="col-md-4"></div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="form-group">
+					<label class="control-label"><label>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="">
+	</div>
+</div>

@@ -1,3 +1,7 @@
+.spacer20{height:20px;}
+.spacer10{height:10px;}
+
+
 .content-header-spacer-20 {
    	margin-top: 20px;
    	margin-bottom: 20px;		
@@ -6,9 +10,6 @@
 .content-indent{
 	margin-left: 35px;
 }
-
-.spacer20{height:20px;}
-.spacer10{height:10px;}
 
 .reset-button{
 	height: 3vw;
@@ -42,6 +43,18 @@
 
 .common-right-indent{
 	margin-right: 5px !important;
+}
+.common-left-indent10{
+	margin-left: 10px !important;
+}
+
+.common-upper-indent{
+	margin-top: 5px !important;
+}
+
+.common-right-icon{
+	text-align: right;
+	font-size: 2.5vw;
 }
 
 /*****************************/
@@ -168,7 +181,7 @@ div.container {
 	display: none;
 }
 
-hr {
+hr, hr.dashboard {
 	border: 0;
 	height: 3px;
 	background: #77c043;
@@ -300,4 +313,32 @@ input[type=checkbox].login-checkbox {
 
 .general-frank{
 	font-size: 2vw;
+}
+
+/*****************************/
+/*****************************/
+/** Nanny Dashboard **/
+/*****************************/
+/*****************************/
+
+.dashboard-search-label{
+	margin-top: 4px !important;
+	padding-right: 5px !important;
+	text-align: right;
+}
+
+.dashboard-button{
+/*    margin-top: 20px;
+    margin-bottom: 20px;	*/
+    color: white;
+    background-color: #77c043;
+    font-weight: bold;	
+}
+
+hr.dashboard {
+	height: 1px;
+}
+
+.pix-control{
+	display: none !important;
 }

@@ -60,6 +60,12 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'MommyBasicInfoCtrl'
   });
 
+  $stateProvider.state('nannyDashboard', {
+    url: '/nanny-dashboard',
+    templateUrl: '/views/nanny-dashboard.html',
+    controller: 'NannyDashboardCtrl'
+  });
+
   //   $stateProvider.state('login', {
   //   url: '/login',
   //   templateUrl: '/views/login.html',
