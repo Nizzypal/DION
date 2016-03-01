@@ -34,6 +34,14 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'ContactCtrl'
   });
 
+  $stateProvider.state('faq', {
+    //url: '/',
+    url: '/faq',
+    templateUrl: '/views/faq.html',
+    //templateUrl: '/views/login.html',
+    controller: 'FAQCtrl'
+  });  
+
   $stateProvider.state('generalSignUp', {
     //url: '/',
     url: '/general-sign-up',
@@ -58,6 +66,12 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     url: '/mommy-basicinfo-2',
     templateUrl: '/views/mommy-basicinfo-2.html',
     controller: 'MommyBasicInfoCtrl'
+  });
+
+  $stateProvider.state('nannyDashboard', {
+    url: '/nanny-dashboard',
+    templateUrl: '/views/nanny-dashboard.html',
+    controller: 'NannyDashboardCtrl'
   });
 
   //   $stateProvider.state('login', {

@@ -21,6 +21,12 @@
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/site.css">
+
+
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
   <!--<link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -56,8 +62,8 @@
     <div class="logo-container"> <img src="images/dion-logo.png" alt="" /> </div>
     <div class="menu-container">
 
-<!--     <div login></div>
-    <div main-navbar></div> -->
+    <div login></div>
+    <div main-navbar></div>
 
     </div>
     <div class="clear"></div>
@@ -76,12 +82,27 @@
   <!-- Portfolio Section
     ================================================== -->
 
-  <div ui-view></div>
+  <div ui-view></div>  
 
   <!--      <div ng-include="'views/main.html'"></div>-->
 
   <!-- End Portfolio Section -->
 
+
+  <footer>
+    <div class="container">
+      <ul class="footer-menu">
+        <li><a href="#">Home</li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Terms Of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Safety</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="clear"></div>
+      <p class="social-links">Find us on <a href="#"><img src="images/icon-fb.png" alt="" /></a><a href="#"><img src="images/icon-googleplus.png" alt="" /></a><a href="#"><img src="images/icon-twitter.png" alt="" /></a> </p>
+    </div>
+  </footer>
 
 <!--   <div id="footer-nav">
     Copyright notice on the bottom
@@ -164,8 +185,11 @@
   <script type="text/javascript" src="scripts/controller/login-modal.controller.js"></script>    
   <script type="text/javascript" src="scripts/controller/forgot.controller.js"></script>    
   <script type="text/javascript" src="scripts/controller/general-sign-up.controller.js"></script>    
+  <script type="text/javascript" src="scripts/controller/contact-us.controller.js"></script>    
+  <script type="text/javascript" src="scripts/controller/faq.controller.js"></script>    
   <script type="text/javascript" src="scripts/controller/nanny-basicinfo.controller.js"></script>    
   <script type="text/javascript" src="scripts/controller/mommy-basicinfo.controller.js"></script>    
+  <script type="text/javascript" src="scripts/controller/nanny-dashboard.controller.js"></script>    
   
 <!--   // <script type="text/javascript" src="/app/scripts/controller/modalController.js"></script>
   // <script type="text/javascript" src="/app/scripts/controller/areaController.js"></script>
@@ -181,7 +205,9 @@
   <script type="text/javascript" src="/app/scripts/directives/login.directive.js"></script>
   <script type="text/javascript" src="/app/scripts/directives/nanny-navbar.directive.js"></script>
   <script type="text/javascript" src="/app/scripts/directives/main-navbar.directive.js"></script>
-  
+  <script type="text/javascript" src="/app/scripts/directives/dashboard-navbar.directive.js"></script>
+  <script type="text/javascript" src="/app/scripts/directives/upload-image.directive.js"></script>
+ 
   <!-- SERVICES -->
   <script type="text/javascript" src="/services/user-data.service.js"></script>
 <!--   // <script src="/services/unit-data-service.js"></script>
