@@ -19,14 +19,14 @@ angular.module('app').controller('FAQCtrl', function($scope, $state, API_URL){
  		$(id).collapse('toggle');
 
  		//var iconElement = $('div').find('span.glyphicon');
- 		var iconElement = event.currentTarget;
+ 		var iconElement = $(event.currentTarget);
 
- 		if (iconElement.hasClass('glyphicon-plus')){
- 			iconElement.removeClass('glyphicon-plus');
- 			iconElement.addClass('glyphicon-minus');
+ 		if ($(iconElement).hasClass('glyphicon-plus')){
+ 			$(iconElement).removeClass('glyphicon-plus');
+ 			$(iconElement).addClass('glyphicon-minus');
  		} else {
- 			iconElement.removeClass('glyphicon-minus');
- 			iconElement.addClass('glyphicon-plus');
+ 			$(iconElement).removeClass('glyphicon-minus');
+ 			$(iconElement).addClass('glyphicon-plus');
  		}
 	}
 
