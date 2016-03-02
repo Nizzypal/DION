@@ -10,6 +10,7 @@ angular.module('app').directive('mainNavbar', function(){
 
                 $scope.goto = function(destination) {
                     
+                    if (destination == 'faq') $state.go('faq');
                     if (destination == 'contactUs') $state.go('contactUs');
                 };
 
