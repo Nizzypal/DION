@@ -34,6 +34,14 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'ContactCtrl'
   });
 
+  $stateProvider.state('faq', {
+    //url: '/',
+    url: '/faq',
+    templateUrl: '/views/faq.html',
+    //templateUrl: '/views/login.html',
+    controller: 'FAQCtrl'
+  });  
+
   $stateProvider.state('generalSignUp', {
     //url: '/',
     url: '/general-sign-up',

@@ -1,3 +1,4 @@
+.spacer50{height:50px;}
 .spacer20{height:20px;}
 .spacer10{height:10px;}
 
@@ -78,14 +79,14 @@
 /*  src: url('/fonts/Aleo-Bold_gdi.eot');
   src: url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.eot?#iefix') format('embedded-opentype'), 
        url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.woff') format('woff'), */
-	src: url('fonts/FRAKB.ttf')  format('truetype'),
+	src: url('../fonts/FRABK.ttf')  format('truetype')
 }
 @font-face {
   font-family: 'Rage';
 /*  src: url('/fonts/Aleo-Bold_gdi.eot');
   src: url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.eot?#iefix') format('embedded-opentype'), 
        url('//cdn.gofundraise.com.au/au/static/EcvFonts/Aleo/bold/Aleo-Bold_gdi.woff') format('woff'), */
-	src: url('fonts/RAGE.ttf')  format('truetype'),
+	src: url('../fonts/RAGE.ttf')  format('truetype')
 }
 
 
@@ -301,6 +302,23 @@ input[type=checkbox].login-checkbox {
     font-weight: bold;
 }
 
+
+/*****************************/
+/*****************************/
+/** FAQ **/
+/*****************************/
+/*****************************/
+.panel-heading{
+	color: white !important;
+	background-color:  #00aeef !important;
+	min-height: 45px;
+}
+
+.panel-icon{
+	float: right;
+	margin-top: 0px;
+	cursor: pointer;	
+}
 
 /*****************************/
 /*****************************/
