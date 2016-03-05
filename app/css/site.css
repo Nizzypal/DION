@@ -320,6 +320,45 @@ input[type=checkbox].login-checkbox {
 	cursor: pointer;	
 }
 
+.panel-body{
+	background-color: #E7EFC0;
+}
+
+.panel-group .panel + .panel{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+/*****************************/
+/*****************************/
+/** About Us **/
+/*****************************/
+/*****************************/
+.about-banner{
+	background-color: #F9F8F6
+}
+
+img.banner{
+    display: block;
+    margin: 0 auto;
+}
+
+.container.about{
+    text-align: center;
+    margin-left: 0px;
+}
+
+.row.vdivide [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
 /*****************************/
 /*****************************/
 /** General Sign Up **/
