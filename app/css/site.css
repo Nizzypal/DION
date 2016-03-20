@@ -2,6 +2,12 @@
 .spacer20{height:20px;}
 .spacer10{height:10px;}
 
+h3{
+    font-size: 35px;
+    font-weight: bold;
+    color: #00aeef;	
+}
+
 
 .content-header-spacer-20 {
    	margin-top: 20px;
@@ -279,32 +285,6 @@ input[type=checkbox].login-checkbox {
 
 /*****************************/
 /*****************************/
-/** Contact **/
-/*****************************/
-/*****************************/
-.contact-control{
-    border-style: solid;
-    border-width: thin;
-    border-color: #77c043		
-}
-
-.contact-textarea{
-	resize: none;
-/*	min-width: 30%;*/
-}
-
-.contact-button{
-	height: 3vw;
-    margin-top: 20px;
-    margin-bottom: 60px;	
-    color: white;
-    background-color: #77c043;
-    font-weight: bold;
-}
-
-
-/*****************************/
-/*****************************/
 /** FAQ **/
 /*****************************/
 /*****************************/
@@ -335,7 +315,7 @@ input[type=checkbox].login-checkbox {
 /*****************************/
 /*****************************/
 .about-banner{
-	background-color: #F9F8F6
+	background-color: #F9F8F6;
 }
 
 img.banner{
@@ -343,12 +323,88 @@ img.banner{
     margin: 0 auto;
 }
 
-.container.about{
+.container.about-banner, .container.about-who, h2.about-story{
     text-align: center;
+}
+
+.container.about-banner{
     margin-left: 0px;
 }
 
-.row.vdivide [class*='col-']:not(:last-child):after {
+.container.about-who{
+    margin-left: auto;	
+}
+
+.about-left{
+	border-right: 1px solid #00aeef;	
+}
+.about-right{
+	border-left: 1px solid #00aeef;	
+}
+
+p.about{
+	text-align: left;
+}
+
+.our-quote{
+	font-style: italic;
+}
+
+.about-story{
+	background-color: #F9F8F6
+}
+
+h4.about-behind, h5.about-behind{
+	color: #00aeef;
+	text-align: left;
+    margin:	0px;
+}
+
+h4.about-behind{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h5.about-behind{
+    font-size: 20px;
+}
+
+.about-left{
+	border-right: 1px solid #00aeef;	
+}
+.about-right{
+	border-left: 1px solid #00aeef;	
+}
+
+p.about{
+	text-align: left;
+}
+
+.our-quote{
+	font-style: italic;
+}
+
+.about-story{
+	background-color: #F9F8F6
+}
+
+h4.about-behind, h5.about-behind{
+	color: #00aeef;
+	text-align: left;
+    margin:	0px;
+}
+
+h4.about-behind{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h5.about-behind{
+    font-size: 20px;
+}
+
+
+/*.row .vdivide [class*='col-']:not(:last-child):after {
   background: #e0e0e0;
   width: 1px;
   content: "";
@@ -357,7 +413,7 @@ img.banner{
   top:0;
   bottom: 0;
   right: 0;
-  min-height: 70px;
+  min-height: 70px;*/
 }
 /*****************************/
 /*****************************/
