@@ -11,6 +11,7 @@ angular.module('app').directive('mainNavbar', function(){
                 $scope.goto = function(destination) {
                     
                     if (destination == 'about') $state.go('about');
+                    if (destination == 'services') $state.go('services');
                     if (destination == 'faq') $state.go('faq');
                     if (destination == 'contactUs') $state.go('contactUs');
                 };
