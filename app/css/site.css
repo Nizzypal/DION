@@ -369,6 +369,52 @@ h5.about-behind{
     font-size: 20px;
 }
 
+.about-left{
+	border-right: 1px solid #00aeef;	
+}
+.about-right{
+	border-left: 1px solid #00aeef;	
+}
+
+p.about{
+	text-align: left;
+}
+
+.our-quote{
+	font-style: italic;
+}
+
+.about-story{
+	background-color: #F9F8F6
+}
+
+h4.about-behind, h5.about-behind{
+	color: #00aeef;
+	text-align: left;
+    margin:	0px;
+}
+
+h4.about-behind{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h5.about-behind{
+    font-size: 20px;
+}
+
+
+/*.row .vdivide [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;*/
+}
 /*****************************/
 /*****************************/
 /** General Sign Up **/
