@@ -50,6 +50,13 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     controller: 'AboutCtrl'
   });    
 
+  $stateProvider.state('services', {
+    //url: '/',
+    url: '/services',
+    templateUrl: '/views/services.html',
+    //templateUrl: '/views/login.html',
+    controller: 'servicesCtrl'
+  });
 
   $stateProvider.state('generalSignUp', {
     //url: '/',
