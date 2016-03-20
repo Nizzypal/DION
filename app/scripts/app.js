@@ -55,7 +55,7 @@ angular.module('app').config(function( $stateProvider, $urlRouterProvider){
     url: '/services',
     templateUrl: '/views/services.html',
     //templateUrl: '/views/login.html',
-    controller: 'servicesCtrl'
+    controller: 'ServicesCtrl'
   });
 
   $stateProvider.state('generalSignUp', {
