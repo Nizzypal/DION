@@ -1,7 +1,6 @@
-var bcrypt = require('bcrypt-nodejs');
 var mongoose = require('mongoose');
 
-var careGiverSchema = new mongoose.Schema({
+var CareGiverSchema = new mongoose.Schema({
 	firstName: String,
 	middleName: String,
 	lastName: String,
@@ -30,4 +29,4 @@ var careGiverSchema = new mongoose.Schema({
 	certOther: Boolean
 });
 
-module.exports = mongoose.model('CareGiver', careGiverSchema);
+module.exports = mongoose.model('CareGiver', CareGiverSchema);

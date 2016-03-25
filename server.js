@@ -7,6 +7,10 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+//Model Requires
+var CareGiver = require('./models/care_seeker.js');
+var CareSeeker = require('./models/care_giver.js');
+
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 //Variables
@@ -49,9 +53,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 if (env === 'development'){
 	mongoose.connect('mongodb://localhost/DION');
+	console.log('Local DB');
 }
 else {
-mongoose.connect('mongodb://jon:nazpal6180@ds047085.mongolab.com:47085/dion');
+	mongoose.connect('mongodb://jon:nazpal6180@ds047085.mongolab.com:47085/dion');
+		console.log('Remote DB');
 }
 
 
@@ -85,6 +91,63 @@ var mongoMessage;
 Message.findOne().exec(function(err, messageDoc){
  	mongoMessage = messageDoc.message;
 });
+
+
+//CRUD Operations
+app.post('/register', function(req, res) {
+	var user = req.body;
+
+	var searchUser = {
+		email: user.email
+	};
+
+	CareSeeker.findOne(searchUser, function(err, user) {
+		if (user) {
+		  res.status(401).send({
+		    message: 'Email already used by another account'
+		  });
+		  return;
+		}
+	});
+
+
+	//Type sepcific Info
+	if (user.type == "caregiver"){
+		var newUser = new CareGiver({
+			firstName: user.firstName,
+			middleName: user.middleName,
+			lastName: user.lastName,
+			email: user.email,
+			password: user.password,
+			city: user.city,
+			agree: user.agreeTerms,
+		})
+	}
+	else {
+		var newUser = new CareSeeker({
+			firstName: user.firstName,
+			middleName: user.middleName,
+			lastName: user.lastName,
+			email: user.email,
+			password: user.password,
+			city: user.city,
+			agree: user.agreeTerms,
+		})
+	}
+
+	//Register Save
+	newUser.save(function(err) {
+		if (err) {
+	      res.status(401).send({
+	        message: 'problem with database encountered'
+	      });
+	      return;
+	    }
+	    res.status(200).send();
+	    return;
+	});
+
+})
 
 
 // app.get('*', function (req, res) {
