@@ -33,12 +33,12 @@
 								<div class="col-md-7 common-remove-upper-indent">
 									<div class="">
 								        <label class="control-label nanny-info-checkbox common-remove-upper-indent pull-left">
-								            <input type="radio" name="favoriteColors" class="common-right-indent" value="careseeker" ng-model="user.type"></input><span class="rage general-rage-nanny">nanny</span>
+								            <input type="radio" name="" class="common-right-indent" value="careseeker" ng-model="user.type"></input><span class="rage general-rage-nanny">nanny</span>
 								        </label>
 									</div>
 									<div class="">
 								        <label class="control-label nanny-info-checkbox common-remove-upper-indent pull-left">
-								            <input type="radio" name="favoriteColors" class="common-right-indent" value="caregiver" ng-model="user.type"></input><span class="rage general-rage-nanny">nanny</span>     job
+								            <input type="radio" name="" class="common-right-indent" value="caregiver" ng-model="user.type"></input><span class="rage general-rage-nanny">nanny</span>     job
 								        </label>
 									</div>
 								</div>
@@ -49,7 +49,7 @@
 							<div class="form-group">
 									<label for="firstname" class="control-label col-md-2 common-remove-left-indent">First Name:</label>
 									<div class="col-md-9">
-										<input type="text" id="firstname" class="form-control contact-control" placeholder="First Name" ng-model="user.firstname">
+										<input type="text" id="firstname" class="form-control contact-control" placeholder="First Name" ng-model="user.firstName">
 									</div>					
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 							<div class="form-group">
 									<label for="middlename" class="col-md-2 control-label common-remove-left-indent">Middle Name:</label>
 									<div class="col-md-9">
-										<input type="text" id="middlename" class="form-control contact-control" placeholder="Middle Name" ng-model="user.middlename">
+										<input type="text" id="middlename" class="form-control contact-control" placeholder="Middle Name" ng-model="user.middleName">
 									</div>
 							</div>
 						</div>						
@@ -67,7 +67,7 @@
 							<div class="form-group">
 									<label for="lastname" class="col-md-2 control-label common-remove-left-indent">Last Name:</label>
 									<div class="col-md-9">
-										<input type="text" id="lastname" class="form-control contact-control" placeholder="Last Name" ng-model="user.lastname">
+										<input type="text" id="lastname" class="form-control contact-control" placeholder="Last Name" ng-model="user.lastName">
 									</div>
 							</div>
 						</div>						
@@ -94,9 +94,9 @@
 							<div class="form-group">
 									<label for="email" class="col-md-2 control-label common-remove-left-indent">Location:</label>
 									<div class="col-md-3">
-										<select class="form-control contact-control" ng-model="user.location">
-											<option value="makati">Makati</option>
-											<option value="taguig">Taguig</option>
+										<select class="form-control contact-control" ng-model="user.city">
+											<option value="{{'makati'}}">Makati</option>
+											<option value="'taguig'">Taguig</option>
 										</select>
 									</div>
 							</div>

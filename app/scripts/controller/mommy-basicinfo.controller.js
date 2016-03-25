@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, API_URL){
+angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, $http, UserDataService, API_URL){
 	var vm = this;
 
   $scope.days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -245,6 +245,7 @@ angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, 
     }    
   ];
 
+  //ui tracks by id, saved data is text
 	$scope.careSeekerData = {
 	    availableOptions: [
 		    {
@@ -262,8 +263,9 @@ angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, 
 		 },
 		 childrenNo: 2,
 		 specialNeeds: "false",
-		 frequency: "fulltime",
-		 urgency: "asap"
+     schedule: "regular",
+		 careFrequency: "fulltime",
+		 dateFlexible: "asap"
     };
 
   $scope.serviceCheck = function(){
@@ -291,7 +293,7 @@ angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, 
 	};
 
 	$scope.urgencyChange = function(){
-		if ($scope.careSeekerData.urgency == "asap"){
+		if ($scope.careSeekerData.dateFlexible == "asap"){
 
 		}
 	};
@@ -301,6 +303,26 @@ angular.module('app').controller('MommyBasicInfoCtrl', function($scope, $state, 
 	};
 
   $scope.clickContinue = function(stateNo){
+
+    $scope.user
+
+    //save user data
+    $http.post(API_URL + 'register', $scope.user)
+      .success(function(newMember){
+          //save uer data
+          UserDataService.setUserInfo($scope.user);
+      
+          //goto next appropriate state
+      if (user.type == 'caregiver'){
+        $state.go('nannyBasicinfo');
+      }else $state.go('mommyBasicinfo');        
+    })
+      .error(function(err){
+          alert('warning: ' + err.message);  
+          return false;
+      });     
+
+
     if (stateNo == 2){
       $state.go("mommyBasicinfo2");   
     }

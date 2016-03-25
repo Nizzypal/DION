@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 //Model Requires
-var CareGiver = require('./models/care_seeker.js');
-var CareSeeker = require('./models/care_giver.js');
+var CareSeeker = require('./models/care_seeker.js');
+var CareGiver = require('./models/care_giver.js');
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -59,7 +59,7 @@ else {
 	mongoose.connect('mongodb://jon:nazpal6180@ds047085.mongolab.com:47085/dion');
 		console.log('Remote DB');
 }
-
+//mongoose.connect('mongodb://jon:nazpal6180@ds047085.mongolab.com:47085/dion');
 
 function encrypt(str){
     var encryptedAES = CryptoJS.AES.encrypt("Message", "Secret Passphse");
@@ -101,6 +101,8 @@ app.post('/register', function(req, res) {
 		email: user.email
 	};
 
+	var newUser = {};
+
 	CareSeeker.findOne(searchUser, function(err, user) {
 		if (user) {
 		  res.status(401).send({
@@ -125,27 +127,39 @@ app.post('/register', function(req, res) {
 
 	//Type sepcific Info
 	if (user.type == "caregiver"){
-		var newUser = new CareGiver({
+			newUser = new CareGiver({
 			firstName: user.firstName,
 			middleName: user.middleName,
 			lastName: user.lastName,
 			email: user.email,
 			password: user.password,
 			city: user.city,
-			agree: user.agreeTerms,
+			agreeTerms: user.agreeTerms,
 		})
 	}
 	else {
-		var newUser = new CareSeeker({
-			firstName: user.firstName,
-			middleName: user.middleName,
-			lastName: user.lastName,
-			email: user.email,
-			password: user.password,
-			city: user.city,
-			agree: user.agreeTerms,
+			newUser = new CareSeeker({
+			city: req.body.city,
+			agreeTerms: req.body.agreeTerms,
+			firstName: req.body.firstName,
+			middleName: req.body.middleName,
+			//lastName: user.lastName,
+			email: req.body.email,
+			password: req.body.password,
 		})
 	}
+
+			// //Register Save
+			// newUser.save(function(err) {
+			// 	if (err) {
+			//       res.status(401).send({
+			//         message: 'problem with database encountered'
+			//       });
+			//       return;
+			//     }
+			//     res.status(200).send();
+			//     return;
+			// });	
 
 })
 

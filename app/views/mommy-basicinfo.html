@@ -98,11 +98,11 @@
 					<div class="form-group col-md-12"> 
 				        <div class="radio col-md-12">
 				            <label class="col-md-6">
-				                <input type="radio" class="mommy-info-radio" value="fulltime" ng-model="careSeekerData.frequency" ng-change="chechRadio(careSeekerData.frequency)">
+				                <input type="radio" class="mommy-info-radio" value="fulltime" ng-model="careSeekerData.careFrequency" ng-change="chechRadio(careSeekerData.careFrequency)">
 				                Full Time
 				            </label>
 				            <label class="col-md-6">
-				                <input type="radio" class="mommy-info-radio" value="partime" ng-model="careSeekerData.frequency" ng-change="chechRadio(careSeekerData.frequency)">
+				                <input type="radio" class="mommy-info-radio" value="partime" ng-model="careSeekerData.careFrequency" ng-change="chechRadio(careSeekerData.careFrequency)">
 				                Part Time
 				            </label>
 				        </div>
@@ -147,12 +147,12 @@
 			    	<div class="col-md-12">
 					    <div class="form-group col-md-6">
 					        <label class="control-label mommy-info-checkbox">
-					            <input type="checkbox" ng-true-value="'asap'" ng-model="careSeekerData.urgency" ng-change="urgencyChange()" > I need a nanny ASAP
+					            <input type="checkbox" ng-true-value="'asap'" ng-model="careSeekerData.dateFlexible" ng-change="urgencyChange()" > I need a nanny ASAP
 					        </label>			          
 						</div>
 					    <div class="form-group col-md-6">
 					        <label class="control-label mommy-info-checkbox">
-					            <input type="checkbox" ng-true-value="'flexible'" ng-model="careSeekerData.urgency" ng-change="urgencyChange()" > Start date is flexible
+					            <input type="checkbox" ng-true-value="'flexible'" ng-model="careSeekerData.dateFlexible" ng-change="urgencyChange()" > Start date is flexible
 					        </label>	
 					    </div>		          
 				    </div>		    																																	

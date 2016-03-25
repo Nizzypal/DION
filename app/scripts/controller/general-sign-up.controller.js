@@ -4,20 +4,20 @@ angular.module('app').controller('generalSignUpCtrl', function($scope, $state, $
 
 	var user = {
 		type:'',
-		firstname:'',
-		middlename:'',
-		lastname:'',
+		firstName:'',
+		middleName:'',
+		lastName:'',
 		email:'',
 		password:'',
-		location:'',
-		agreeTerms: false
+		city:'',
+		agreeTerms: 'false'
 	};
 	
 	$scope.user = user;
 
 	$scope.Contiue = function(){
 
-
+		user.agreeTerms = true;
 
 		//user is new and must register	
 	    $http.post(API_URL + 'register', $scope.user)
@@ -34,7 +34,7 @@ angular.module('app').controller('generalSignUpCtrl', function($scope, $state, $
 		        alert('warning: ' + err.message);  
 		        return false;
 		    });	
-	}
+	};
 
 	vm.submit = function(){
 		//alert('user - ' + user.email);

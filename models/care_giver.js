@@ -13,7 +13,9 @@ var CareGiverSchema = new mongoose.Schema({
 	status: String,
 	email: String,
 	password: String,
-	
+
+ //    agreeTerms:  { type: Boolean, default: false },
+	// city: String,
 
 	//Transaction Info
 	college: String,
