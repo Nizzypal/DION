@@ -107,6 +107,18 @@ app.post('/register', function(req, res) {
 		    message: 'Email already used by another account'
 		  });
 		  return;
+		} else {
+			//Register Save
+			newUser.save(function(err) {
+				if (err) {
+			      res.status(401).send({
+			        message: 'problem with database encountered'
+			      });
+			      return;
+			    }
+			    res.status(200).send();
+			    return;
+			});
 		}
 	});
 
@@ -134,18 +146,6 @@ app.post('/register', function(req, res) {
 			agree: user.agreeTerms,
 		})
 	}
-
-	//Register Save
-	newUser.save(function(err) {
-		if (err) {
-	      res.status(401).send({
-	        message: 'problem with database encountered'
-	      });
-	      return;
-	    }
-	    res.status(200).send();
-	    return;
-	});
 
 })
 

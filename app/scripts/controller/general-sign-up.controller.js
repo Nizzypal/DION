@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').controller('generalSignUpCtrl', function($scope, $state, $http, API_URL){
+angular.module('app').controller('generalSignUpCtrl', function($scope, $state, $http, UserDataService, API_URL){
 	var vm = this;
 
 	var user = {
@@ -17,16 +17,19 @@ angular.module('app').controller('generalSignUpCtrl', function($scope, $state, $
 
 	$scope.Contiue = function(){
 
-		if (user.type == 'caregiver'){
-			$state.go('mommyBasicinfo');
-		} else $state.go('nannyBasicinfo');
+
 
 		//user is new and must register	
 	    $http.post(API_URL + 'register', $scope.user)
 		    .success(function(newMember){
-		        //userDataService.setUserInfo({userID: newMember.user._id, userName: newMember.user.email});
-		    	$state.go('main');
-		    })
+		        //save uer data
+		        UserDataService.setUserInfo($scope.user);
+				
+		        //goto next appropriate state
+				if (user.type == 'caregiver'){
+					$state.go('nannyBasicinfo');
+				}else $state.go('mommyBasicinfo');		    
+			})
 		    .error(function(err){
 		        alert('warning: ' + err.message);  
 		        return false;

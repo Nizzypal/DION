@@ -10,10 +10,11 @@ angular.module('app')
             middlename:'',
             lastname:'',
             address:'',
+            city:'',
             number:'',
             subject:'',
             message:'',           
-            remember: ''
+            agreeTerms: ''
         };
 
         return{
@@ -21,9 +22,36 @@ angular.module('app')
                 return UserInfo;
             },
             setUserInfo: function(value){
-                UserInfo.email = value.email;
-                UserInfo.password = value.password;
-                UserInfo.remember = value.remember;    
+                if (value.email != null && value.email != ''){
+                    UserInfo.email = value.email;
+                }
+                if (value.password != null && value.password != ''){
+                    UserInfo.password = value.password;
+                }
+                if (value.firstname != null && value.firstname != ''){
+                    UserInfo.firstname = value.firstname;
+                }
+                if (value.middlename != null && value.middlename != ''){
+                    UserInfo.middlename = value.middlename;
+                }
+                if (value.lastname != null && value.lastname != ''){
+                    UserInfo.lastname = value.lastname;
+                }
+                if (value.city != null && value.city != ''){
+                    UserInfo.city = value.city;
+                }
+                if (value.agreeTerms != null && value.agreeTerms != ''){
+                    UserInfo.agreeTerms = value.agreeTerms;
+                }
+                // if (value.email != null){
+                //     UserInfo.email = value.email;
+                // }
+                // if (value.email != null){
+                //     UserInfo.email = value.email;
+                // }
+                // if (value.email != null){
+                //     UserInfo.email = value.email;
+                // }
             },
             setContactInfo: function(value){
                 UserInfo.firstname = value.firstname,
